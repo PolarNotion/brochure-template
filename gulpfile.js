@@ -39,7 +39,7 @@ gulp.task('sass', function () {
     .pipe( notifyError() )
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass({
-      includePaths: require('node-neat').with([fontAwesome.scssPath, config.bootstrapDir + '/assets/stylesheets'])
+      includePaths: [fontAwesome.scssPath, config.bootstrapDir + '/assets/stylesheets']
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./app/css'));
