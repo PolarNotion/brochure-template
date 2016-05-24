@@ -15,7 +15,13 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-require('../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js');
+var _node_modulesBootstrapSassAssetsJavascriptsBootstrapMinJs = require('../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js');
+
+var _node_modulesBootstrapSassAssetsJavascriptsBootstrapMinJs2 = _interopRequireDefault(_node_modulesBootstrapSassAssetsJavascriptsBootstrapMinJs);
+
+window.$ = window.jQuery = _jquery2['default'];
+
+_node_modulesBootstrapSassAssetsJavascriptsBootstrapMinJs2['default'].$ = _jquery2['default'];
 
 console.log('Hello, World');
 

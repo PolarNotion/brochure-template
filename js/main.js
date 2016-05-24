@@ -1,6 +1,8 @@
 import $ from 'jquery';
+window.$ = window.jQuery = $;
 import _ from 'underscore';
 import moment from 'moment';
-import '../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js';
+import Bootstrap from '../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js';
+Bootstrap.$ = $;
 
 console.log('Hello, World');
