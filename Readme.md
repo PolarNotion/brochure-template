@@ -1,7 +1,6 @@
-## Welcome to My Project
+## Polar Notion
 
-> I am your Readme.md file, you should probably update me.
-
+> This is a Polar Notion front end project. 
 
 ## Usage
 
@@ -16,20 +15,16 @@
 
 ## Assets Setup and ready for use
 
-- [Bourbon](http://bourbon.io/)
-- [Neat](http://neat.bourbon.io/)
+- [Bootstrap](http://getbootstrap.com/)
 - [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
-- [Foundation 5](http://foundation.zurb.com/)
 
 #### How to use them?
 
 At the top of your `main.scss` file, just import any of the following:
 
 ```scss
-@import "bourbon";
-@import "neat";
-
-@import "foundation";
+@import "variables";
+@import "bootstrap";
 
 @import "font-awesome";
 ```
