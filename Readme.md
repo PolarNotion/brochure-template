@@ -13,9 +13,7 @@
 > To publish the app to ghpages, run
 ```
 git subtree push app origin gh-pages
-
 ```
-
 
 ## Assets Installed By Default
 
