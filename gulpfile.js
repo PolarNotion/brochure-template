@@ -134,7 +134,8 @@ gulp.task('server', ['default'], function () {
     }));
 });
 
-gulp.task('default', ['render',
+gulp.task('default', [
+                      'render',
                       'sass',
                       'fonts',
                       'normalize',
