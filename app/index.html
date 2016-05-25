@@ -19,25 +19,45 @@
   <nav class="navabar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a id="navbar-logo" class="" href="#">
+        <!-- brand -->
+        <a class="navbar-brand" href="index.html">
           Logo
         </a>
+        <!-- toggle button -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
       </div>
 
-      <div class="nav-options-wrapper">
-        <div class="navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href="">Action</a></li>
-            <li class="display-xs hidden-sm hidden-md hidden-md hidden-lg hidden-xl"><a href="">Action</a></li>
-          </ul>
-          <a href="" class="hidden-xs btn navbar-btn btn-dark">Action</a>
-        </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="">Action</a>
+          </li>
+          <li>
+            <a href="">Action</a>
+          </li>
+          <li class="close-nav hidden-sm hidden-md hidden-lg">
+            <a href="">
+              <button
+              type="button" 
+              class="navbar-toggle collapsed" 
+              data-toggle="collapse" 
+              data-target="#myNavbar" 
+              aria-expanded="false">
+                <i class="fa fa-times white"></i>
+              </button>
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
   </nav>
 
-  
+  <!-- Scripts -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>  
   <script src="js/main.js"></script>
 </body>
 </html>
