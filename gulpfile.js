@@ -12,10 +12,9 @@ var server  = require('gulp-server-livereload');
 var fontAwesome = require('node-font-awesome');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
-var htmlhint = require('gulp-htmlhint');
 var jscs = require('gulp-jscs');
+var htmlrender = require('gulp-htmlrender')
 var watch = require('gulp-watch'); // A Better File Watcher
-
 // Set up Foundation
 var path = require('path');
 var config = {
@@ -70,6 +69,12 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('./app/js'));
 });
 
+gulp.task('render', function() {
+  return gulp.src('html/index.html', {read: false})
+    .pipe(htmlrender.render())
+    .pipe(gulp.dest('app'));
+});
+
 // Janky - quick fix to write spec file
 gulp.task('browserify-test', function() {
   return browserify('./js/tests.js', {debug: true})
@@ -103,25 +108,18 @@ gulp.task('hint:js', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('hint:html', function() {
-  return gulp.src('./app/index.html')
-    .pipe(notifyError())
-    .pipe(htmlhint())
-    .pipe(htmlhint.failReporter());
-});
-
-gulp.task('lint', ['style:js', 'hint:js', 'hint:html']);
+gulp.task('lint', ['style:js', 'hint:js']);
 
 gulp.task('watch', function() {
+  watch(['./html/**/*.html'], function () {
+    gulp.start('render');
+  });
   watch('./sass/**/*.scss', function () {  
     gulp.start('sass'); 
   });
   watch(['./js/**/*.js', './package.json'], function () {
     gulp.start('browserify');
     gulp.start('browserify-test');
-  });
-  watch('./app/index.html', function () {
-    gulp.start('hint:html');
   });
   watch('./js/**/*.js', function () {
     gulp.start('hint:js');
@@ -136,7 +134,8 @@ gulp.task('server', ['default'], function () {
     }));
 });
 
-gulp.task('default', ['sass',
+gulp.task('default', ['render',
+                      'sass',
                       'fonts',
                       'normalize',
                       'lint',
