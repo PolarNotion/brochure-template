@@ -15,6 +15,12 @@ require('bootstrap-sass');
 
 console.log('Hello, World');
 
+$('.toggle-sidebar').click(function (e) {
+  e.preventDefault;
+  console.log('toggle sidebar');
+  $('#wrapper').toggleClass('toggled');
+});
+
 },{"bootstrap-sass":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)

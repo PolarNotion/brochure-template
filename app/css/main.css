@@ -7987,4 +7987,92 @@ button.close {
   overflow: visible;
   clip: auto; }
 
+#wrapper {
+  padding-right: 0;
+  margin-left: -400px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled {
+  padding-right: 400px;
+  margin-left: 0px; }
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0px;
+  width: 400px;
+  height: 100%;
+  margin-right: 0px;
+  background: #FFF;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#shareable_options {
+  display: none; }
+
+#wrapper.toggled #sidebar-wrapper {
+  right: -400px; }
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute; }
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -400px; }
+
+@media (max-width: 768px) {
+  #wrapper {
+    padding-right: 0; }
+  #wrapper.toggled {
+    padding-right: 100vw; }
+  #sidebar-wrapper {
+    width: 100vw; }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 100vw; } }
+
+.sidebar-container {
+  height: 100vh;
+  background: transparent; }
+  .sidebar-container .sidebar-scrollable {
+    padding-top: 120px;
+    margin-top: -120px;
+    overflow: scroll;
+    height: 100vh;
+    margin-bottom: 150px; }
+  .sidebar-container .sidebar-header {
+    background: #FFF; }
+    .sidebar-container .sidebar-header #sidebar-name {
+      margin: 0px;
+      padding: 20px;
+      display: inline-block;
+      max-width: 75%;
+      font-size: 24px; }
+    .sidebar-container .sidebar-header .toggle-sidebar {
+      display: inline-block;
+      padding: 15px; }
+      .sidebar-container .sidebar-header .toggle-sidebar:hover {
+        cursor: pointer; }
+      .sidebar-container .sidebar-header .toggle-sidebar .fa {
+        font-size: 30px; }
+  .sidebar-container #sidebar-map {
+    height: 200px; }
+  .sidebar-container .sidebar-content {
+    padding: 20px; }
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #FFF;
+  padding: 20px;
+  min-height: 120px; }
+  .sidebar-footer .share {
+    color: black; }
+
 /*# sourceMappingURL=main.css.map */
