@@ -16,7 +16,7 @@ require('bootstrap-sass');
 console.log('Hello, World');
 
 $('.toggle-sidebar').click(function (e) {
-  e.preventDefault;
+  e.preventDefault();
   console.log('toggle sidebar');
   $('#wrapper').toggleClass('toggled');
 });

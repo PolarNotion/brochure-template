@@ -7987,6 +7987,10 @@ button.close {
   overflow: visible;
   clip: auto; }
 
+.navbar-btn {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
 #wrapper {
   padding-right: 0;
   margin-left: -400px;
@@ -8043,10 +8047,14 @@ button.close {
     padding-top: 120px;
     margin-top: -120px;
     overflow: scroll;
-    height: 100vh;
-    margin-bottom: 150px; }
+    height: 110%;
+    margin-bottom: 50px; }
   .sidebar-container .sidebar-header {
-    background: #FFF; }
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    height: 70px;
+    width: 100%; }
     .sidebar-container .sidebar-header #sidebar-name {
       margin: 0px;
       padding: 20px;
@@ -8062,8 +8070,11 @@ button.close {
         font-size: 30px; }
   .sidebar-container #sidebar-map {
     height: 200px; }
-  .sidebar-container .sidebar-content {
-    padding: 20px; }
+
+.sidebar-content {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #e6e6e6; }
 
 .sidebar-footer {
   position: absolute;
@@ -8071,7 +8082,7 @@ button.close {
   width: 100%;
   background: #FFF;
   padding: 20px;
-  min-height: 120px; }
+  min-height: 50px; }
   .sidebar-footer .share {
     color: black; }
 

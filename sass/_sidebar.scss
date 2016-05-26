@@ -70,12 +70,16 @@
     padding-top: 120px;
     margin-top: -120px;
     overflow: scroll;
-    height: 100vh;
-    margin-bottom: 150px;
+    height: 110%;
+    margin-bottom: 50px;
   }
 
   .sidebar-header {
     background: #FFF;
+    position: absolute;
+    top: 0px;
+    height: 70px;
+    width: 100%;
 
     #sidebar-name {
       margin: 0px;
@@ -100,11 +104,12 @@
   #sidebar-map {
     height: 200px;
   }
-    
-  .sidebar-content {
-    padding: 20px;
-  }
+}
 
+.sidebar-content {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: $body-bg;
 }
 
 .sidebar-footer {
@@ -113,7 +118,7 @@
   width: 100%;
   background: #FFF;
   padding: 20px;
-  min-height: 120px;
+  min-height: 50px;
 
   .share {
     color: black;

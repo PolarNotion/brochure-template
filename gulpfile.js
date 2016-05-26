@@ -70,7 +70,7 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('render', function() {
-  return gulp.src('html/index.html', {read: false})
+  return gulp.src('layout/index.html', {read: false})
     .pipe(htmlrender.render())
     .pipe(gulp.dest('app'));
 });
