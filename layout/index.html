@@ -16,11 +16,18 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+  <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong>
+      browser. Please
+      <a href="http://browsehappy.com/">upgrade your browser</a> to
+      improve your experience.</p>
+  <![endif]-->
 
   <div id="wrapper" class="toggled">
     <div id="page-content-wrapper">
       <%include src="partials/nav.html"%>
       <%include src="partials/content.html"%>
+      <%include src="partials/modal.html"%>
     </div>
     <%include src="partials/sidebar.html"%>
   </div>

@@ -111,7 +111,7 @@ gulp.task('hint:js', function() {
 gulp.task('lint', ['style:js', 'hint:js']);
 
 gulp.task('watch', function() {
-  watch(['./html/**/*.html'], function () {
+  watch(['./layout/**/*.html'], function () {
     gulp.start('render');
   });
   watch('./sass/**/*.scss', function () {  
