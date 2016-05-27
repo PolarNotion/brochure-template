@@ -5817,30 +5817,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.modal-content {
-  border-radius: 0px;
-  border: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.modal-header {
-  background-color: #F2F2F2;
-  font-size: 28px;
-  padding: 40px;
-  border-bottom: none; }
-
-.modal-body {
-  color: #999;
-  background-color: #FFF;
-  font-size: 18px;
-  font-weight: 400;
-  padding: 40px; }
-
-.modal-footer {
-  padding: 10px 40px 40px 40px;
-  border: none;
-  font-size: 22px; }
-
 /*!
  *  Font Awesome 4.6.1 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -8011,6 +7987,13 @@ button.close {
   overflow: visible;
   clip: auto; }
 
+.btn {
+  padding: 10px 25px; }
+
+.btn-lg, .btn-group-lg > .btn {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
 .navbar-btn {
   margin-top: 15px;
   margin-bottom: 15px; }
@@ -8053,16 +8036,6 @@ button.close {
 #wrapper.toggled #page-content-wrapper {
   position: absolute;
   margin-right: -400px; }
-
-@media (max-width: 768px) {
-  #wrapper {
-    padding-right: 0; }
-  #wrapper.toggled {
-    padding-right: 100vw; }
-  #sidebar-wrapper {
-    width: 100vw; }
-  #wrapper.toggled #sidebar-wrapper {
-    width: 100vw; } }
 
 .sidebar-container {
   height: 100vh;
@@ -8109,5 +8082,39 @@ button.close {
   min-height: 50px; }
   .sidebar-footer .share {
     color: black; }
+
+@media (max-width: 768px) {
+  #wrapper {
+    padding-right: 0; }
+  #wrapper.toggled {
+    padding-right: 100vw; }
+  #sidebar-wrapper {
+    width: 100vw; }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 100vw; } }
+
+.modal-content {
+  border-radius: 0px;
+  border: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.modal-header {
+  background-color: #F2F2F2;
+  font-size: 28px;
+  padding: 40px;
+  border-bottom: none; }
+
+.modal-body {
+  color: #999;
+  background-color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 40px; }
+
+.modal-footer {
+  padding: 10px 40px 40px 40px;
+  border: none;
+  font-size: 22px; }
 
 /*# sourceMappingURL=main.css.map */

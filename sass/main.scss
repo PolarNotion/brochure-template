@@ -1,6 +1,6 @@
 // Put any @imports here
 // See Readme for a list of supported ones
-@import 'variables';
+@import 'partials/variables';
 // Bootstrap variable Overrides
 $font-size-base: 18px; 
 $brand-primary:         #428bca; // #337ab7
@@ -10,13 +10,14 @@ $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 
 @import 'bootstrap';
-@import 'bootstrap_overrides';
 @import 'font-awesome';
-@import 'mixins';
+@import 'partials/mixins';
 
 // Variable Declarations
 $primary: #e2ebf3;
 $secondary: #666;
 
-@import 'navbar';
-@import 'sidebar';
+@import 'partials/bootstrap';
+@import 'partials/navbar';
+@import 'partials/sidebar';
+@import 'partials/modal';

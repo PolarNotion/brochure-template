@@ -44,23 +44,6 @@
   margin-right: -400px;
 }
 
-@media(max-width:768px) {
-  #wrapper {
-    padding-right: 0;
-  }
-
-  #wrapper.toggled {
-    padding-right: 100vw;
-  }
-
-  #sidebar-wrapper {
-    width: 100vw;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    width: 100vw;
-  }
-}
 
 .sidebar-container {
   height: 100vh;
@@ -122,5 +105,23 @@
 
   .share {
     color: black;
+  }
+}
+
+@media(max-width:768px) {
+  #wrapper {
+    padding-right: 0;
+  }
+
+  #wrapper.toggled {
+    padding-right: 100vw;
+  }
+
+  #sidebar-wrapper {
+    width: 100vw;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 100vw;
   }
 }

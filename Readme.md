@@ -31,7 +31,6 @@ git subtree push app origin gh-pages
 At the top of your `main.scss` file, just import any of the following:
 
 ```scss
-@import "variables";
 @import "bootstrap";
 @import "font-awesome";
 ```
