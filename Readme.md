@@ -1,6 +1,6 @@
 ## Polar Notion
 
-> This is a Polar Notion front end project. 
+> This is a Polar Notion front end project.
 
 ## Usage
 
@@ -8,6 +8,14 @@
 - Run `npm install` to install all necessary dependencies
 - Run `gulp start` to start the server and a handful of other tasks
 
+> Note: You shouldn't have to touch anything in the app folder, as everything will be compiled into there. If you do decide to use a router and different style of partials ( if youre using angular, react, or some other framework ) or a single index.html file, open the gulpfile.js and comment or delete lines 72-76, lines 114-116, and line 138 to turn off the html compiler.
+
+## Publishing
+
+To publish the app to ghpages, run
+```
+git subtree push app origin gh-pages
+```
 
 ## Assets Installed By Default
 
@@ -23,13 +31,9 @@
 At the top of your `main.scss` file, just import any of the following:
 
 ```scss
-@import "variables";
 @import "bootstrap";
-
 @import "font-awesome";
 ```
-
-> Note: You probably don't want to use BOTH Bourbon/Neat & Foundation. Just pick one.
 
 ## NPM Tools Used
 

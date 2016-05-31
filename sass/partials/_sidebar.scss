@@ -1,0 +1,127 @@
+#wrapper {
+  padding-right: 0;
+  margin-left: -400px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-right: 400px;
+  margin-left: 0px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0px;
+  width: 400px;
+  height: 100%;
+  margin-right: 0px;
+  background: #FFF;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#shareable_options {
+  display: none;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  right: -400px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -400px;
+}
+
+
+.sidebar-container {
+  height: 100vh;
+  background: transparent;
+
+  .sidebar-scrollable {
+    padding-top: 120px;
+    margin-top: -120px;
+    overflow: scroll;
+    height: 110%;
+    margin-bottom: 50px;
+  }
+
+  .sidebar-header {
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    height: 70px;
+    width: 100%;
+
+    #sidebar-name {
+      margin: 0px;
+      padding: 20px;
+      display: inline-block;
+      max-width: 75%;
+      font-size: 24px;
+    }
+
+    .toggle-sidebar {
+      display: inline-block;
+      padding: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+      .fa {
+        font-size: 30px;
+      }
+    }
+  }
+
+  #sidebar-map {
+    height: 200px;
+  }
+}
+
+.sidebar-content {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: $body-bg;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #FFF;
+  padding: 20px;
+  min-height: 50px;
+
+  .share {
+    color: black;
+  }
+}
+
+@media(max-width:768px) {
+  #wrapper {
+    padding-right: 0;
+  }
+
+  #wrapper.toggled {
+    padding-right: 100vw;
+  }
+
+  #sidebar-wrapper {
+    width: 100vw;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 100vw;
+  }
+}

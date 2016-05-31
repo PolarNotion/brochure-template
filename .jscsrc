@@ -1,4 +1,5 @@
 {
+  "preset": "airbnb",
   "validateIndentation": 2,
   "esnext": true
 }

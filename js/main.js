@@ -1,8 +1,11 @@
-import $ from 'jquery';
-window.$ = window.jQuery = $;
 import _ from 'underscore';
 import moment from 'moment';
-import Bootstrap from '../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js';
-Bootstrap.$ = $;
+import 'bootstrap-sass';
 
 console.log('Hello, World');
+
+$('.toggle-sidebar').click(function (e) {
+  e.preventDefault();
+  console.log('toggle sidebar');
+  $('#wrapper').toggleClass('toggled');
+});
