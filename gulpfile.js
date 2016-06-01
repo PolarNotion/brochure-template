@@ -1,22 +1,23 @@
-var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var browserify = require('browserify');
-var babel = require('babelify');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
-var notify  = require('gulp-notify');
-var uglify = require('gulp-uglify');
-var server  = require('gulp-server-livereload');
+var gulp        = require('gulp');
+var sourcemaps  = require('gulp-sourcemaps');
+var source      = require('vinyl-source-stream');
+var buffer      = require('vinyl-buffer');
+var browserify  = require('browserify');
+var babel       = require('babelify');
+var bourbon     = require('bourbon');
+var sass        = require('gulp-sass');
+var plumber     = require('gulp-plumber');
+var notify      = require('gulp-notify');
+var uglify      = require('gulp-uglify');
+var server      = require('gulp-server-livereload');
 var fontAwesome = require('node-font-awesome');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var jscs = require('gulp-jscs');
-var htmlrender = require('gulp-htmlrender')
-var watch = require('gulp-watch'); // A Better File Watcher
-// Set up Foundation
-var path = require('path');
+var jshint      = require('gulp-jshint');
+var stylish     = require('jshint-stylish');
+var jscs        = require('gulp-jscs');
+var htmlrender  = require('gulp-htmlrender')
+var watch       = require('gulp-watch'); // A Better File Watcher
+var path        = require('path');
+
 var config = {
   bootstrapDir: './node_modules/bootstrap-sass'
 };
