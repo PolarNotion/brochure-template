@@ -1,23 +1,23 @@
-var gulp        = require('gulp'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    source      = require('vinyl-source-stream'),
-    buffer      = require('vinyl-buffer'),
-    browserify  = require('browserify'),
-    babel       = require('babelify'),
-    bourbon     = require('bourbon'),
-    sass        = require('gulp-sass'),
-    plumber     = require('gulp-plumber'),
-    notify      = require('gulp-notify'),
-    uglify      = require('gulp-uglify'),
-    server      = require('gulp-server-livereload'),
-    fontawesome = require('node-font-awesome'),
-    jshint      = require('gulp-jshint'),
-    stylish     = require('jshint-stylish'),
-    jscs        = require('gulp-jscs'),
-    htmlrender  = require('gulp-htmlrender'),
-    watch       = require('gulp-watch'),
-    path        = require('path');
-
+var gulp        = require('gulp');
+var sourcemaps  = require('gulp-sourcemaps');
+var source      = require('vinyl-source-stream');
+var buffer      = require('vinyl-buffer');
+var browserify  = require('browserify');
+var babel       = require('babelify');
+var bourbon     = require('bourbon');
+var sass        = require('gulp-sass');
+var plumber     = require('gulp-plumber');
+var notify      = require('gulp-notify');
+var uglify      = require('gulp-uglify');
+var server      = require('gulp-server-livereload');
+var fontAwesome = require('node-font-awesome');
+var jshint      = require('gulp-jshint');
+var stylish     = require('jshint-stylish');
+var jscs        = require('gulp-jscs');
+var htmlrender  = require('gulp-htmlrender')
+var watch       = require('gulp-watch'); // A Better File Watcher
+// Set up Foundation
+var path        = require('path');
 var config = {
   bootstrapDir: './node_modules/bootstrap-sass'
 };
@@ -71,9 +71,9 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('render', function() {
-  return gulp.src('layout/index.html', {read: false})
+  return gulp.src('layout/*.html', {read: false})
     .pipe(htmlrender.render())
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('app'))
 });
 
 // Janky - quick fix to write spec file
