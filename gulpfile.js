@@ -71,7 +71,7 @@ gulp.task('browserify', function() {
     .transform(babel)
     .bundle()
     .on('error', browserifyError)
-    .pipe(source('./app/main.js'))
+    .pipe(source('./main.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     // .pipe(uglify())
