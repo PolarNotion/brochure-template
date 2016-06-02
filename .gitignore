@@ -1,7 +1,4 @@
 node_modules
 .DS_Store
 .divshot-cache
-app/js
-app/fonts
-app/css
-app/*.html
+dist
