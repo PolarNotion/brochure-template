@@ -8029,7 +8029,7 @@ button.close {
 #wrapper.toggled #sidebar-wrapper {
   right: -400px; }
 
-#page-content-wrapper {
+#page_content_wrapper {
   width: 100%;
   position: absolute; }
 

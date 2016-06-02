@@ -14,8 +14,9 @@ var fontAwesome = require('node-font-awesome');
 var jshint      = require('gulp-jshint');
 var stylish     = require('jshint-stylish');
 var jscs        = require('gulp-jscs');
-var htmlrender  = require('gulp-htmlrender')
+var htmlrender  = require('gulp-htmlrender');
 var watch       = require('gulp-watch'); // A Better File Watcher
+var del         = require('del');
 // Set up Foundation
 var path        = require('path');
 var config = {
@@ -70,6 +71,10 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('./app/js'));
 });
 
+gulp.task('clean:app', function(){
+  return del.sync('app/*.html');
+});
+
 gulp.task('render', function() {
   return gulp.src('layout/*.html', {read: false})
     .pipe(htmlrender.render())
@@ -113,6 +118,7 @@ gulp.task('lint', ['style:js', 'hint:js']);
 
 gulp.task('watch', function() {
   watch(['./layout/**/*.html'], function () {
+    gulp.start('clean:app');
     gulp.start('render');
   });
   watch('./sass/**/*.scss', function () {  
@@ -135,7 +141,7 @@ gulp.task('server', ['default'], function () {
     }));
 });
 
-gulp.task('default', [
+gulp.task('default', ['clean:app',
                       'render',
                       'sass',
                       'fonts',
