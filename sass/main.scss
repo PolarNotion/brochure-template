@@ -17,7 +17,10 @@ $brand-danger:          #d9534f;
 $primary: #e2ebf3;
 $secondary: #666;
 
+@import 'partials/polar_styles';
 @import 'partials/bootstrap';
 @import 'partials/navbar';
+@import 'partials/header';
 @import 'partials/sidebar';
 @import 'partials/modal';
+@import 'partials/footer';

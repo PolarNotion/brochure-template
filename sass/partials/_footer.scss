@@ -1,0 +1,29 @@
+footer {
+  min-height: 40px;
+  /*background-color: white;*/
+  padding: 0px;
+  content: '';
+  display: table;
+  clear: both;
+  width: 100%;
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      a {
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
+      } 
+    }
+    li:last-child {
+      margin-right: 0px;
+    }
+  }
+}
