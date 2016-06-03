@@ -10,11 +10,20 @@
 
 > Note: You shouldn't have to touch anything in the app folder, as everything will be compiled into there. If you do decide to use a router and different style of partials ( if youre using angular, react, or some other framework ) or a single index.html file, open the gulpfile.js and comment or delete lines 72-76, lines 114-116, and line 138 to turn off the html compiler.
 
+### Workflow
+
+Make sure to write all your code in the app folder. Everything will be compiled into dist, and when your ready to publish to staging or somewhere else, just remove dist from the gitignore file and run the publish command.
+
+To compress images, run
+```
+$ gulp compress
+```
+
 ## Publishing
 
 To publish the app to ghpages, run
 ```
-git subtree push app origin gh-pages
+git subtree push dist origin gh-pages
 ```
 
 ## Assets Installed By Default
