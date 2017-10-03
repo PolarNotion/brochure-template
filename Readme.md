@@ -5,6 +5,13 @@
 ## Usage
 
 - Clone this repo
+```
+$ git clone THIS_REPO PROJECT_NAME
+$ cd PROJECT_NAME
+$ rm -rf ./.git //remove template repo data
+$ npm install
+$ git init
+```
 - Run `npm install` to install all necessary dependencies
 - Run `gulp start` to start the server and a handful of other tasks
 
