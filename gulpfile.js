@@ -1,25 +1,29 @@
-var gulp        = require('gulp');
-var sourcemaps  = require('gulp-sourcemaps');
-var source      = require('vinyl-source-stream');
-var buffer      = require('vinyl-buffer');
-var browserify  = require('browserify');
-var babel       = require('babelify');
-var bourbon     = require('bourbon');
-var sass        = require('gulp-sass');
-var plumber     = require('gulp-plumber');
-var notify      = require('gulp-notify');
-var uglify      = require('gulp-uglify');
-var server      = require('gulp-server-livereload');
-var fontAwesome = require('node-font-awesome');
-var jshint      = require('gulp-jshint');
-var stylish     = require('jshint-stylish');
-var jscs        = require('gulp-jscs');
-var htmlrender  = require('gulp-htmlrender');
-var watch       = require('gulp-watch'); // A Better File Watcher
-var del         = require('del');
-var imagemin    = require('gulp-imagemin');
-var cache       = require('gulp-cache');
-// Set up Foundation
+var gulp          = require('gulp');
+var sourcemaps    = require('gulp-sourcemaps');
+var source        = require('vinyl-source-stream');
+var buffer        = require('vinyl-buffer');
+var browserify    = require('browserify');
+var babel         = require('babelify');
+var htmlmin       = require('gulp-htmlmin');
+var bourbon       = require('bourbon');
+var sass          = require('gulp-sass');
+var postcss       = require('gulp-postcss');
+var cssnano       = require('cssnano');
+var autoprefixer  = require('autoprefixer');
+var plumber       = require('gulp-plumber');
+var notify        = require('gulp-notify');
+var uglify        = require('gulp-uglify');
+var server        = require('gulp-server-livereload');
+var fontAwesome   = require('node-font-awesome');
+var jshint        = require('gulp-jshint');
+var stylish       = require('jshint-stylish');
+var jscs          = require('gulp-jscs');
+var htmlrender    = require('gulp-htmlrender');
+var watch         = require('gulp-watch'); // A Better File Watcher
+var del           = require('del');
+var imagemin      = require('gulp-imagemin');
+var cache         = require('gulp-cache');
+// Set up Foundations
 var path        = require('path');
 var config = {
   bootstrapDir: './node_modules/bootstrap-sass'
@@ -43,6 +47,10 @@ gulp.task('sass', function () {
     .pipe(sass({
       includePaths: [fontAwesome.scssPath, config.bootstrapDir + '/assets/stylesheets']
     }))
+    .pipe(postcss([
+      autoprefixer(),
+      cssnano(),
+    ]))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'));
 });
@@ -74,7 +82,7 @@ gulp.task('browserify', function() {
     .pipe(source('./main.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/js'));
 });
@@ -86,6 +94,7 @@ gulp.task('clean:dist', function(){
 gulp.task('render', function() {
   return gulp.src('app/layout/*.html', {read: false})
     .pipe(htmlrender.render())
+    .pipe(htmlmin())
     .pipe(gulp.dest('dist'))
 });
 
